@@ -19,26 +19,26 @@ export class ListComponent implements OnInit {
   }
 
   //get Posts
-  getPosts(){
+  getPosts() {
     this.posts = this.postService.getPosts();
   }
 
   //delete post
-  deletePost(i){
+  deletePost(i) {
     this.postService.deletePost(i);
   }
 
   //add like
-  addLike(i){
+  addLike(i) {
     this.postService.addLike(i);
   }
   //dislike like
-  disLike(i){
+  disLike(i) {
     this.postService.disLike(i);
   }
 
   //get connection
-  getConnection(){
+  getConnection() {
     this.connection = this.postService.getConnection();
   }
 }
