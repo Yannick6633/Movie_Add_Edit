@@ -1,0 +1,34 @@
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <label for="title">Title</label>
+        <input type="text" name="title" [ngModel]="post?.title" class="w-100">
+      </div>
+      <div class="col-12">
+        <label for="resume">Resume</label>
+        <input type="text" name="resume" [ngModel]="post?.resume" class="w-100">
+      </div>
+      <div class="col-12">
+        <label for="picture">Image</label>
+        <input type="text" name="picture" [ngModel]="post?.picture" class="w-100">
+      </div>
+      <div class="col-6">
+        <label for="author">Author</label>
+        <input type="text" name="author" [ngModel]="post?.author" class="w-100">
+      </div>
+      <div class="col-6">
+        <label for="date">Date</label>
+        <input type="date" name="date" [ngModel]="post?.date | date:'y-MM-dd'" (ngModelChange)="myDate = $event" class="w-100">
+      </div>
+      <div class="col-12">
+        <label for="description">Description</label>
+        <textarea name="description" [ngModel]="post?.description" cols="30" rows="10" class="w-100"></textarea>
+      </div>
+      <div class="col-12">
+        <button class="btn-success" type="submit">Add</button>
+      </div>
+      <input type="hidden" name="like" [ngModel]="post?.like">
+    </div>
+</div>
+</form>
