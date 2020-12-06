@@ -7,7 +7,7 @@ export class Post {
     public picture: string,
     public date: Date,
     public like: number
-  ){
+  ) {
     this.title = title;
     this.resume = resume;
     this.description = description;

@@ -10,21 +10,21 @@ import { Post } from '../post';
 })
 export class DetailComponent implements OnInit {
 
-  id:number;
+  id: number;
   post: Post;
 
   constructor(private route: ActivatedRoute, private postService: PostService) {
     this.route.params
     .subscribe( params => {
                   this.id = params.id;
-                })
+                });
    }
 
   ngOnInit() {
     this.getPost(this.id);
   }
 
-  getPost(i){
+  getPost(i) {
     this.post = this.postService.getPost(i);
   }
 
